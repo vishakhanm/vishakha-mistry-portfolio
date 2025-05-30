@@ -73,7 +73,7 @@ export default function Projects() {
                     "Wrote comprehensive test cases using JUnit and Mockito, achieving 99% test coverage across varied workloads"
                 ],
             tags: ["Java", "Apache Maven"],
-            media: { type: "image", src: "/images/dbms.jpg" },
+            media: { type: "image", src: "./images/dbms.jpg" },
             github: "https://github.com/Khushi2405/IMDB-Query-Engine"
         },
         {
@@ -114,7 +114,7 @@ export default function Projects() {
                 "Uses physics-based and keyframe animations, supports sound, menus, and keyboard input"
             ],
             tags: ["Unity 3D", "C#"],
-            media: { type: "video", src: "/media/576FinalVideo.mp4" },
+            media: { type: "video", src: "./media/576FinalVideo.mp4", poster: "./images/gp_thumbnail.png" },
             github: "https://github.com/epicmouse667/CS576_FINAL_PROJECT"
         }
     ];
@@ -143,7 +143,7 @@ export default function Projects() {
                                     muted
                                     playsInline
                                     loop
-                                    poster="/images/gp_thumbnail.png">
+                                    poster={project.media.poster}>
                                     <source src={project.media.src} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>

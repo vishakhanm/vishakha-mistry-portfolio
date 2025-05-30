@@ -27,13 +27,13 @@ function App() {
       <div
         className="h-screen w-screen bg-cover bg-center flex items-center justify-center relative"
         style={{
-          backgroundImage: "url('/images/background_1.jpg')",
+          backgroundImage: "url('./images/background_1.jpg')",
         }}
       >
         <div className="absolute bottom-10 left-10 p-6 md:p-8 bg-opacity-90 shadow-lg z-10 max-w-4xl w-full md:w-auto flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
           {/* Profile Image on the Left */}
           <img
-            src="/images/profile.jpg"
+            src="./images/profile.jpg"
             alt="Vishakha Mistry"
             className="w-80 h-100 object-cover shadow-md"
           />

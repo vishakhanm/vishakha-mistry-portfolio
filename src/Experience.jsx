@@ -6,7 +6,7 @@ const experiences = [
         company: "Zeus Learning",
         duration: "Jun 2022 – Jul 2024",
         location: "Mumbai, India",
-        logo: "/images/zeus_learning_logo.jpg",
+        logo: "./images/zeus_learning_logo.jpg",
         details: [
             "Collaborated with cross-functional teams in an Agile environment to design and develop a custom SDK for creating and managing interactive CMS assessments.",
             "Built and enhanced full-stack features across 12+ question types using Angular and .NET.",
@@ -26,7 +26,7 @@ export default function Experience() {
         <section
             id="experience"
             className="w-full px-6 py-16 bg-gray-50 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/background_2.jpg')" }}
+            style={{ backgroundImage: "url('./images/background_2.jpg')" }}
         >
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">Experience</h2>

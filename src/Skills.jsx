@@ -1,16 +1,16 @@
 import React from "react";
 
 const skills = [
-    { name: ".Net", icon: "/icons/dotnet.png" },
-    { name: "Angular", icon: "/icons/angular.webp" },
-    { name: "Node.js", icon: "/icons/nodejs.png" },
+    { name: ".Net", icon: "./icons/dotnet.png" },
+    { name: "Angular", icon: "./icons/angular.webp" },
+    { name: "Node.js", icon: "./icons/nodejs.png" },
     { name: "React", icon: "./icons/react.png" },
-    { name: "HTML5 CSS JS", icon: "/icons/html_css_js.jpg" },
-    { name: "MySQL", icon: "/icons/mysql.jpg" },
+    { name: "HTML5 CSS JS", icon: "./icons/html_css_js.jpg" },
+    { name: "MySQL", icon: "./icons/mysql.jpg" },
     { name: "Java", icon: "./icons/java.jpg" },
-    { name: "Python", icon: "/icons/python.jpg" },
-    { name: "C#", icon: "/icons/csharp.jpg" },
-    { name: "C++", icon: "/icons/cpp.jpg" },
+    { name: "Python", icon: "./icons/python.jpg" },
+    { name: "C#", icon: "./icons/csharp.jpg" },
+    { name: "C++", icon: "./icons/cpp.jpg" },
 ];
 
 export default function Skills() {
