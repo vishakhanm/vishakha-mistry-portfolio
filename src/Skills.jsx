@@ -4,7 +4,7 @@ const skills = [
     { name: ".Net", icon: "/icons/dotnet.png" },
     { name: "Angular", icon: "/icons/angular.webp" },
     { name: "Node.js", icon: "/icons/nodejs.png" },
-    { name: "React", icon: "./icons/react.png" },
+    { name: "React", icon: "/icons/react.png" },
     { name: "HTML5 CSS JS", icon: "/icons/html_css_js.jpg" },
     { name: "MySQL", icon: "/icons/mysql.jpg" },
     { name: "Java", icon: "/icons/java.jpg" },
