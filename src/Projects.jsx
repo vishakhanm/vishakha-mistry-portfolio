@@ -16,7 +16,7 @@ function ProjectOverlay({ title, description, tags, onClose, github, media }) {
                 <div className="w-full h-[200px] mb-4 rounded overflow-hidden flex items-center justify-center bg-gray-100">
                     {media && media.type === "image" && (
                         <img
-                            src={media.src}
+                            src={`${process.env.PUBLIC_URL}${media.src}`}
                             alt="Project media"
                             className="w-full h-full object-contain"
                         />
@@ -26,7 +26,7 @@ function ProjectOverlay({ title, description, tags, onClose, github, media }) {
                             controls
                             className="w-full h-full object-contain"
                         >
-                            <source src={media.src} type="video/mp4" />
+                            <source src={`${process.env.PUBLIC_URL}${media.src}`} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     )}
@@ -48,9 +48,12 @@ function ProjectOverlay({ title, description, tags, onClose, github, media }) {
                     href={github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-black-700 border border-black-300 bg-black-50 rounded-lg hover:bg-black-100 hover:shadow transition duration-200"
                 >
-                    GitHub Repo
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8a8.003 8.003 0 005.47 7.59c.4.074.55-.174.55-.387 0-.19-.007-.693-.01-1.36-2.01.437-2.43-.97-2.43-.97-.364-.922-.89-1.168-.89-1.168-.727-.497.055-.487.055-.487.803.057 1.225.825 1.225.825.715 1.224 1.874.87 2.33.665.073-.518.28-.87.508-1.07-1.6-.183-3.28-.798-3.28-3.553 0-.785.28-1.426.74-1.928-.075-.183-.32-.922.07-1.922 0 0 .6-.192 1.97.736A6.93 6.93 0 018 4.793c.607.003 1.22.082 1.79.24 1.37-.928 1.97-.736 1.97-.736.39 1 .145 1.739.07 1.922.46.502.74 1.143.74 1.928 0 2.765-1.68 3.368-3.28 3.547.288.25.543.739.543 1.492 0 1.077-.01 1.945-.01 2.21 0 .214.15.465.55.386A8.005 8.005 0 0016 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                    GitHub
                 </a>
             </div>
         </div>
@@ -73,7 +76,7 @@ export default function Projects() {
                     "Wrote comprehensive test cases using JUnit and Mockito, achieving 99% test coverage across varied workloads"
                 ],
             tags: ["Java", "Apache Maven"],
-            media: { type: "image", src: "./images/dbms.jpg" },
+            media: { type: "image", src: "/images/dbms.jpg" },
             github: "https://github.com/Khushi2405/IMDB-Query-Engine"
         },
         {
@@ -87,7 +90,7 @@ export default function Projects() {
                 "Designed for scalability and modular features"
             ],
             tags: ["Flutter", "Google Firebase"],
-            media: { type: "image", src: "./images/social_media.png" },
+            media: { type: "image", src: "/images/social_media.png" },
             github: "https://github.com/sidjmishra/Friend-Suggestion-on-Music"
         },
         {
@@ -100,7 +103,7 @@ export default function Projects() {
                 "Connected Python-Flask backend to trained NLP model"
             ],
             tags: ["Python", "Flask", "Bootstrap"],
-            media: { type: "image", src: "./images/guj_news_classification.png" },
+            media: { type: "image", src: "/images/guj_news_classification.png" },
             github: "https://github.com/vishakhanm/Gujarati_News_Classification"
         },
         {
@@ -114,7 +117,7 @@ export default function Projects() {
                 "Uses physics-based and keyframe animations, supports sound, menus, and keyboard input"
             ],
             tags: ["Unity 3D", "C#"],
-            media: { type: "video", src: "./media/576FinalVideo.mp4", poster: "./images/gp_thumbnail.png" },
+            media: { type: "video", src: "/media/576FinalVideo.mp4", poster: "/images/gp_thumbnail.png" },
             github: "https://github.com/epicmouse667/CS576_FINAL_PROJECT"
         }
     ];
@@ -125,6 +128,7 @@ export default function Projects() {
                 <h2 className="text-3xl font-bold mb-10 text-gray-800">Projects</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
+
                         <div
                             key={index}
                             onClick={(e) => {
@@ -134,21 +138,28 @@ export default function Projects() {
                             }}
                             className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:border-blue-500 cursor-pointer transition duration-300"
                         >
-                            {project.media && project.media.type === "image" && (
-                                <img src={project.media.src} alt="Project media-1"
-                                    className="h-48 w-full object-cover" />
-                            )}
-                            {project.media && project.media.type === "video" && (
-                                <video controls className="h-48 w-full object-cover bg-black"
-                                    muted
-                                    playsInline
-                                    loop
-                                    poster={project.media.poster}>
-                                    <source src={project.media.src} type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            )}
-                            <div className="p-6">
+                            {
+                                project.media && project.media.type === "image" && (
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}${project.media.src}`}
+                                        alt="Project media-1"
+                                        className="h-48 w-full object-cover"
+                                    />
+                                )
+                            }
+                            {
+                                project.media && project.media.type === "video" && (
+                                    <video controls className="h-48 w-full object-cover bg-black"
+                                        muted
+                                        playsInline
+                                        loop
+                                        poster={`${process.env.PUBLIC_URL}${project.media.poster}`}>
+                                        <source src={`${process.env.PUBLIC_URL}${project.media.src}`} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                )
+                            }
+                            < div className="p-6" >
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                                     {project.title}
                                 </h3>
@@ -160,13 +171,24 @@ export default function Projects() {
                                         <span key={idx} className="bg-gray-200 text-sm px-3 py-1 rounded-full">{tag}</span>
                                     ))}
                                 </div>
-                                <a
+                                {/* <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
                                 >
                                     GitHub Repo
+                                </a> */}
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-black-700 border border-black-300 bg-black-50 rounded-lg hover:bg-black-100 hover:shadow transition duration-200"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8a8.003 8.003 0 005.47 7.59c.4.074.55-.174.55-.387 0-.19-.007-.693-.01-1.36-2.01.437-2.43-.97-2.43-.97-.364-.922-.89-1.168-.89-1.168-.727-.497.055-.487.055-.487.803.057 1.225.825 1.225.825.715 1.224 1.874.87 2.33.665.073-.518.28-.87.508-1.07-1.6-.183-3.28-.798-3.28-3.553 0-.785.28-1.426.74-1.928-.075-.183-.32-.922.07-1.922 0 0 .6-.192 1.97.736A6.93 6.93 0 018 4.793c.607.003 1.22.082 1.79.24 1.37-.928 1.97-.736 1.97-.736.39 1 .145 1.739.07 1.922.46.502.74 1.143.74 1.928 0 2.765-1.68 3.368-3.28 3.547.288.25.543.739.543 1.492 0 1.077-.01 1.945-.01 2.21 0 .214.15.465.55.386A8.005 8.005 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                    GitHub
                                 </a>
                             </div>
                         </div>
@@ -174,17 +196,19 @@ export default function Projects() {
                 </div>
 
                 {/* Reusable Overlay */}
-                {activeProject && (
-                    <ProjectOverlay
-                        title={activeProject.title}
-                        description={activeProject.fullDescription}
-                        tags={activeProject.tags}
-                        onClose={() => setActiveProject(null)}
-                        github={activeProject.github}
-                        media={activeProject.media}
-                    />
-                )}
-            </div>
-        </section>
+                {
+                    activeProject && (
+                        <ProjectOverlay
+                            title={activeProject.title}
+                            description={activeProject.fullDescription}
+                            tags={activeProject.tags}
+                            onClose={() => setActiveProject(null)}
+                            github={activeProject.github}
+                            media={activeProject.media}
+                        />
+                    )
+                }
+            </div >
+        </section >
     );
 }
