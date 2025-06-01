@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/vishakha-mistry-portfolio/static/css/main.e66b5387.css",
-    "main.js": "/vishakha-mistry-portfolio/static/js/main.1f06df38.js",
+    "main.js": "/vishakha-mistry-portfolio/static/js/main.d0b1db96.js",
     "static/js/453.acca0757.chunk.js": "/vishakha-mistry-portfolio/static/js/453.acca0757.chunk.js",
     "static/media/logo.svg": "/vishakha-mistry-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/vishakha-mistry-portfolio/index.html",
     "main.e66b5387.css.map": "/vishakha-mistry-portfolio/static/css/main.e66b5387.css.map",
-    "main.1f06df38.js.map": "/vishakha-mistry-portfolio/static/js/main.1f06df38.js.map",
+    "main.d0b1db96.js.map": "/vishakha-mistry-portfolio/static/js/main.d0b1db96.js.map",
     "453.acca0757.chunk.js.map": "/vishakha-mistry-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e66b5387.css",
-    "static/js/main.1f06df38.js"
+    "static/js/main.d0b1db96.js"
   ]
 }
