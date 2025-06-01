@@ -72,7 +72,7 @@ export default function Projects() {
                     "Developed a Buffer Manager using an LRU replacement policy and hash-based page lookup to optimize disk I/O for binary files with over 10M records",
                     "Implemented a B+ Tree indexing mechanism supporting clustered and unclustered indexes, improving query performance by up to 100x over sequential scans",
                     "Built a simple query executor that performs block-nested loop joins using an in-memory hash table to join two tables efficiently",
-                    "Designed the system with pipelined communication between operators, except for selection and projection, to maximize memory efficiency",
+                    "Designed the system with pipelined communication between various operators like selection, projection, BNL Join to maximize memory efficiency",
                     "Wrote comprehensive test cases using JUnit and Mockito, achieving 99% test coverage across varied workloads"
                 ],
             tags: ["Java", "Apache Maven"],
@@ -87,7 +87,7 @@ export default function Projects() {
                 "Built mobile-friendly UI using Flutter with smooth transitions and responsive layouts",
                 "Integrated Spotify SDK and APIs to fetch and authenticate user music profiles",
                 "Configured Google Firestore for real-time database updates",
-                "Designed for scalability and modular features"
+                // "Designed for scalability and modular features"
             ],
             tags: ["Flutter", "Google Firebase"],
             media: { type: "image", src: "/images/social_media.png" },
@@ -100,7 +100,7 @@ export default function Projects() {
                 "Automated classification of Gujarati news using TF-IDF vectorizer and LinearSVC",
                 "Achieved 82% accuracy on a dataset of 5200+ articles",
                 "Built responsive front-end using Bootstrap for user input",
-                "Connected Python-Flask backend to trained NLP model"
+                "Connected Python-Flask backend to the trained NLP model"
             ],
             tags: ["Python", "Flask", "Bootstrap"],
             media: { type: "image", src: "/images/guj_news_classification.png" },
@@ -110,12 +110,11 @@ export default function Projects() {
             title: "Geometry Puzzle Adventure",
             shortDescription: "Interactive 3D geometry game that teaches math through puzzle-solving",
             fullDescription: [
-                "Answer geometry questions by moving to zones in a 3D puzzle world",
-                "Earn puzzle pieces for correct answers; lose lives for incorrect ones",
-                "Collect all pieces to complete the puzzle and unlock fun geometry facts",
-                "Includes AI challenges, floating platforms, level selection, and difficulty modes",
-                "Uses physics-based and keyframe animations, supports sound, menus, and keyboard input"
-            ],
+                "An educational game designed for children to strengthen geometry knowledge in an immersive 3D world built with Unity 3D.",
+                "Developed interactive gameplay with puzzle pieces, fun geometry facts, AI-controlled NPCs, and multiple difficulty modes.",
+                "Integrated physics-based animations and spatial sound effects for a more engaging and inclusive experience."
+            ]
+            ,
             tags: ["Unity 3D", "C#"],
             media: { type: "video", src: "/media/576FinalVideo.mp4", poster: "/images/gp_thumbnail.png" },
             github: "https://github.com/epicmouse667/CS576_FINAL_PROJECT"
